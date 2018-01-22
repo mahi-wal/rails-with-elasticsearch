@@ -1,0 +1,3 @@
+= simple_form_for(:user, html: {class: 'login-form search-users-form', method: :get }, 
+  url: users_path) do |f|
+  = f.input :query, required: false, autofocus: true, input_html: { class: "admin-search-user", value: nil  }, placeholder: 'Search Users',  label: false, type: 'text'

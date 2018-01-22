@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
   def index
-    byebug
+    @users = User.search(params[:user][:query])
   end
 end
