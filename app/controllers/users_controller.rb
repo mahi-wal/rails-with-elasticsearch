@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.search(params[:user][:query])
+    query = params[:user].present? ? params[:user][:query] : ''
+    @users = User.search(query)
   end
 end
